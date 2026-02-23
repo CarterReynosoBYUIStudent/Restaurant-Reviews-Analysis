@@ -1,5 +1,7 @@
+from numpy import rint
 import pandas as pd
 import os
+from pathlib import Path
 base_dir = os.path.dirname(os.path.abspath(__file__))
 from datetime import datetime
 
@@ -13,16 +15,10 @@ def load_data(file_path):
         return None
 
 
-def filter_data(df, country=None, restaurant=None, sentiment=None, 
+def filter_data(df, sentiment=None, 
                 start_date=None, end_date=None):
     
     filtered_df = df.copy()
-
-    if country:
-        filtered_df = filtered_df[filtered_df["Country"] == country]
-
-    if restaurant:
-        filtered_df = filtered_df[filtered_df["Restaurant"] == restaurant]
 
     if sentiment:
         filtered_df = filtered_df[filtered_df["Sentiment"] == sentiment]
@@ -62,7 +58,7 @@ def sentiment_ratio(df):
 
 
 def main():
-    file_name = input("Enter CSV file name: ")
+    file_name = 'EuropeanRestaurantReviews.csv'
     file_path = os.path.join(base_dir, file_name)
     df = load_data(file_path)
 
@@ -71,13 +67,11 @@ def main():
 
     print("\nAvailable columns:", df.columns.tolist())
 
-    country = input("Filter by Country (or press Enter to skip): ") or None
-    restaurant = input("Filter by Restaurant (or press Enter to skip): ") or None
     sentiment = input("Filter by Sentiment (Positive/Negative or press Enter to skip): ") or None
     start_date = input("Start Date (YYYY-MM-DD or press Enter to skip): ") or None
     end_date = input("End Date (YYYY-MM-DD or press Enter to skip): ") or None
 
-    filtered_df = filter_data(df, country, restaurant, sentiment, start_date, end_date)
+    filtered_df = filter_data(df, sentiment, start_date, end_date)
 
     print(f"\nFiltered Results: {len(filtered_df)} rows found.")
 
