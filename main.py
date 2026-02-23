@@ -65,8 +65,10 @@ def main():
     print("\nAvailable columns:", df.columns.tolist())
 
     sentiment = input("Filter by Sentiment (Positive/Negative or press Enter to skip): ") or None
-    start_date = input("Start Date (YYYY-MM-DD or press Enter to skip): ") or None
-    end_date = input("End Date (YYYY-MM-DD or press Enter to skip): ") or None
+    # start_date = input("Start Date (YYYY-MM-DD or press Enter to skip): ") or None
+    # end_date = input("End Date (YYYY-MM-DD or press Enter to skip): ") or None
+    start_date = None
+    end_date = None
 
     filtered_df = filter_data(df, sentiment, start_date, end_date)
 
@@ -79,7 +81,8 @@ def main():
         filtered_df = sort_data(filtered_df, sort_column, ascending)
 
     print("\nPreview of Data:")
-    print(filtered_df.head())
+    # print(filtered_df.head())
+    print(filtered_df)
 
     sentiment_ratio(filtered_df)
 
