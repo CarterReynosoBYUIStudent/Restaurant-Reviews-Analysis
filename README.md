@@ -1,41 +1,41 @@
 # Restaurant-Reviews-Analysis
 
-Add a description of your project here
+Python based tool to analyze postive and negative reviews for a restaurant review dataset
 
 ## Instructions for Build and Use
 
 Steps to build and/or run the software:
 
-1. First step here
-2.
-3.
+1. Ensure Python 3.8 or later is installed on your system.
+2. Install required dependencies using pip: "pip install pandas"
+3. Place the dataset file EuropeanRestaurantReviews.csv in the same directory as the Python script.
 
 Instructions for using the software:
 
-1. First step here
-2.
-3.
+1. When prompted, optionally enter a sentiment filter: Type "Positive" or Type "Negative" or press Enter to skip filtering by sentiment.
+2. Optionally enter a column name to sort the filtered results. If so, Choose sorting order (yes for ascending, no for descending).
+   3.The program will then: Display a preview of the filtered dataset, Show sentiment counts, and Display the negative-to-positive review ratio
 
 ## Development Environment
 
 To recreate the development environment, you need the following software and/or libraries with the specified versions:
 
-* First thing here
-*
-*
+- Python 3.8+
+- pandas (latest stable version recommended)
+- Code editor (recommended): VS Code
 
 ## Useful Websites to Learn More
 
 I found these websites useful in developing this software:
 
-* [Website Title](Link)
-*
-*
+- https://www.youtube.com/@datageekismyname/playlistsLinks to an external site.
+- https://www.kaggle.com/code/kashnitsky/topic-1-exploratory-data-analysis-with-pandasLinks to an external site.
+- https://pandas.pydata.org/docs/user_guide/10min.html#minLinks to an external site.
+- https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.htmlLinks to an external site.
 
 ## Future Work
 
 The following items I plan to fix, improve, and/or add to this project in the future:
 
-* [ ] First thing here
-* [ ]
-* [ ]
+- filter by date range
+- add a visual aid
